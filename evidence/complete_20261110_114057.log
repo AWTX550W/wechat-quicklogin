@@ -1,0 +1,26 @@
+profile=E:\WorkBuddy\开发\wechat-quicklogin\edge-profile ext=True lna_off=False
+打开: https://channels.weixin.qq.com/login.html
+[REQ] POST https://localhost.weixin.qq.com:14013/api/check-login
+[FAIL] https://localhost.weixin.qq.com:14013/api/check-login net::ERR_ABORTED
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:14013/api/check-login
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:14014/api/check-login
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:14015/api/check-login
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:13013/api/check-login
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:13014/api/check-login
+[CON] checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ] POST https://localhost.weixin.qq.com:13015/api/check-login
+[FAIL] https://localhost.weixin.qq.com:14014/api/check-login net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:14015/api/check-login net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:13013/api/check-login net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:13015/api/check-login net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:13014/api/check-login net::ERR_CONNECTION_REFUSED
+[CLICK] 按包围盒没点到，尝试 DOM click
+[CLICK] DOM click 已执行
+[WAIT] 已发出 authorize 请求，等你在微信里点「允许」……
+  [..] url=https://channels.weixin.qq.com/login.html btn=0
+[TIMEOUT] 等超时，未确认

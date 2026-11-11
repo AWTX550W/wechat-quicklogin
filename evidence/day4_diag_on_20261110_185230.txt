@@ -1,0 +1,65 @@
+[main CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[main CON] info Images loaded lazily and replaced with placeholders. Load events are deferred. See https://go.microsoft.com/fwlink/?linkid=2048113
+[main CON] warning A parser-blocking, cross site (i.e. different eTLD+1) script, https://s9.cnzz.com/z_stat.php?id=1278067628&show=pic, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to
+[main CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[main CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[main CON] warning A parser-blocking, cross site (i.e. different eTLD+1) script, https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a f
+[main CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[main CON] verbose [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://www.chromium.org/developers/design-documents/create-amazing-password-forms) %o
+[pop CON] log fast_login:  null
+[pop CON] log fastLogin_enabled:  true
+[pop CON] log qrcode loaded， duration:  263
+[popup full url] https://open.weixin.qq.com/connect/qrconnect?appid=wx5861020de978fd53&redirect_uri=https%3A%2F%2Fwww.sk1z.com%2Fsocial-login%3Ftype%3Dwechat%26action%3Dcallback&response_type=code&scope=snsapi_login&state=4342f3203cc091f1718791c8d2994b76#wechat_redirect
+[pop CON] log checklogin请求发起: Tue Nov 10 2026 18:52:36 GMT+0800 (中国标准时间)
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  14013
+[pop REQ] POST https://localhost.weixin.qq.com:14013/api/check-login
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  14014
+[pop REQ] POST https://localhost.weixin.qq.com:14014/api/check-login
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  14015
+[pop REQ] POST https://localhost.weixin.qq.com:14015/api/check-login
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  13013
+[pop REQ] POST https://localhost.weixin.qq.com:13013/api/check-login
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  13014
+[pop REQ] POST https://localhost.weixin.qq.com:13014/api/check-login
+[pop CON] log checklogin post redirect_uri https://www.sk1z.com/social-login?type=wechat&action=callback
+[pop CON] log 当前port:  13015
+[pop REQ] POST https://localhost.weixin.qq.com:13015/api/check-login
+[pop CON] log 端口14015连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop FAIL] https://localhost.weixin.qq.com:14015/api/check-login -> net::ERR_CONNECTION_RESET
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[pop CON] log 端口14014连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop FAIL] https://localhost.weixin.qq.com:14014/api/check-login -> net::ERR_CONNECTION_RESET
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[pop CON] log 端口13015连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop FAIL] https://localhost.weixin.qq.com:13015/api/check-login -> net::ERR_CONNECTION_RESET
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[pop CON] log 端口13013连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop FAIL] https://localhost.weixin.qq.com:13013/api/check-login -> net::ERR_CONNECTION_RESET
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[pop CON] log 端口13014连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop FAIL] https://localhost.weixin.qq.com:13014/api/check-login -> net::ERR_CONNECTION_RESET
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_RESET
+[pop CON] log 端口14013连接失败，尝试下一个端口
+[pop CON] log before handle, fastLogin:  false
+[pop CON] log after handle, fastLogin:  false
+[pop CON] log fastLogin:  false
+[pop CON] log 请求结束: Tue Nov 10 2026 18:52:36 GMT+0800 (中国标准时间)
+[pop CON] log 请求时长: 14 ms
+[pop FAIL] https://localhost.weixin.qq.com:14013/api/check-login -> net::ERR_CONNECTION_CLOSED
+[pop CON] error Failed to load resource: net::ERR_CONNECTION_CLOSED
+[DOM] {"btn": {"html": "<button class=\"weui-btn weui-btn_primary js_quick_login_btn qlogin_btn\" type=\"button\">微信快捷登录</button>", "display": "block", "vis": "visible", "parentDisplay": "block", "parentClass": "qlogin_mod"}, "tips": {"html": "<div class=\"web_qrcode_tips js_web_qrcode_tips_fast\" style=\"display:none;\"><i class=\"web_qrcode_tips_logo\"></i>使用微信快捷登录</div>", "display": "none"}, "fast_login": "connect_page_self\"),i(\"auto\"),document.body.className+=\" web_qrcode_type_page_self\",jQuery(\"#tpl_for_page\").show())}var U=window.usenewdomain?\"https://lp.open.weixin.qq.com\":\"https://long.open.weixin.qq.com\",N=t(\"self_redirect\"),G=\"0919qVCQ3X6xnl2R\",F=!1,M=!1,V=360,K=263,R=-1,z=!1,L=0!==parseInt(t(\"fast_login\"),10);console.log(\"fast_login: \",t(\"fast_login\")),console.log(\"fastLogin_enabled: \",L);var Y,J,Z,W=[14013,14014,14015,13013,13014,13015];$(\".js_quick_login_btn\").click(function(){o(\"action\",\"connect_qrconnect_fastLogin_click\",1);var n=a(V,K);$(\".js_quick_login_btn\").prop(\"disabled\",!0),console.log(\"发起authorize请求，port=\",J),console.log(\"authorize post redirect_uri\",t(\"redirect_uri\")),$.ajax({url:\"https://localhost.weixin.qq.com:\"+J+\"/api/authorize\",type:\"POST\",cache:!1,contentType:\"appl", "checklogin": ",data:JSON.stringify(o),success:function(t){i&&i(t),c.resolve(t,e[0])},error:function(r,a,d){console.log(\"端口\"+e[0]+\"连接失败，尝试下一个端口\"),e.length>1?l(e.slice(1),t,n,o,i,s,c):(s&&s(),c.resolve(!1))}}),c.promise())}function d(n){return console.log(\"checklogin post redirect_uri\",t(\"redirect_uri\")),l(n,\"/api/check-login\",\"POST\",{apiname:\"qrconnectchecklogin\",jsdata:{appid:e(\"appid\"),scope:e(\"scope\"),redirect_uri:t(\"redirect_uri\"),state:t(\"state\")||\"\"}},function(e){o(\"action\",\"connect_qrconnect_checkLogin_succ\",1)},function(){o(\"action\",\"connect_qrconnect_checkLogin_fail\",1)})}function _(e){var t=e.errcode;switch(t){case 10057:console.log(\"此应用仅支持扫一扫登录\"),$(\"#quick_login_unsupport_toast\").fadeIn(300,function(){var e=this;setTimeout(function(){$(e).fadeOut(300)},1e3)}),o(\"action\",\"connect_qrconnect_fast", "qlogin": "p.open.weixin.qq.com\":\"https://long.open.weixin.qq.com\",N=t(\"self_redirect\"),G=\"0919qVCQ3X6xnl2R\",F=!1,M=!1,V=360,K=263,R=-1,z=!1,L=0!==parseInt(t(\"fast_login\"),10);console.log(\"fast_login: \",t(\"fast_login\")),console.log(\"fastLogin_enabled: \",L);var Y,J,Z,W=[14013,14014,14015,13013,13014,13015];$(\".js_quick_login_btn\").click(function(){o(\"action\",\"connect_qrconnect_fastLogin_click\",1);var n=a(V,K);$(\".js_quick_login_btn\").prop(\"disabled\",!0),console.log(\"发起authorize请求，port=\",J),console.log(\"authorize post redirect_uri\",t(\"redirect_uri\")),$.ajax({url:\"https://localhost.weixin.qq.com:\"+J+\"/api/authorize\",type:\"POST\",cache:!1,contentType:\"application/json\",data:JSON.stringify({apiname:\"qrconnectfastauthorize\",jsdata:{data:JSON.stringify({x:n.x,y:n.y}),appid:e(\"appid\"),scope:e(\"scope\"),redirec"}

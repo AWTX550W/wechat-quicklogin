@@ -1,0 +1,40 @@
+浏览器: Edge(channel=msedge) headless   LNA: off
+目标  : https://channels.weixin.qq.com/login.html
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14013/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14014/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14015/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13013/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13014/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13015/api/check-login
+[FAIL] https://localhost.weixin.qq.com:14014/api/check-login -> net::ERR_CONNECTION_RESET
+[FAIL] https://localhost.weixin.qq.com:13013/api/check-login -> net::ERR_CONNECTION_RESET
+[FAIL] https://localhost.weixin.qq.com:13015/api/check-login -> net::ERR_CONNECTION_RESET
+[FAIL] https://localhost.weixin.qq.com:14015/api/check-login -> net::ERR_CONNECTION_RESET
+[FAIL] https://localhost.weixin.qq.com:13014/api/check-login -> net::ERR_CONNECTION_RESET
+[FAIL] https://localhost.weixin.qq.com:14013/api/check-login -> net::ERR_CONNECTION_CLOSED
+
+--- frames ---
+  frame url=https://channels.weixin.qq.com/login.html
+  frame url=https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&scope=snsapi_login&redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2Fplatform%
+
+--- iframe 标签（看 allow 属性）---
+  <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&amp;scope=snsapi_login&amp;redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2Fplatform%2Foauth-callback.html%3Fdark%3D1&amp;state=undefined&amp;login_type=jssdk&amp;self_redirect=true&amp;styletype=&amp;sizetype=&amp;bgcolor=&amp;rst=&amp;ts=1794308252237&amp;style=white&amp;stylelite=1&amp;color_scheme=dark" frame
+
+--- 关键文案探测 ---
+  '微信快捷登录' 命中 3
+  '使用微信扫码' 命中 0
+  '立即登录' 命中 0
+  '同意' 命中 0
+  '扫码登录' 命中 0
+  '二维码' 命中 0
+
+--- 捕获到的本地接口响应体 ---
+
+--- 最终 URL ---
+  https://channels.weixin.qq.com/login.html

@@ -1,0 +1,16 @@
+{
+  "tag": "baicizhan",
+  "ts": "20261110_181516",
+  "url": "https://np.baicizhan.com/",
+  "state": "logged_in",
+  "qr_png": "E:\\WorkBuddy\\开发\\wechat-quicklogin\\evidence\\day4_liveqr_baicizhan_20261110_181516.png",
+  "payload": "http://weixin.qq.com/q/02h4LQAc7KeQh1YhNOxGcC",
+  "events": [
+    "[preclick] 登录/注册",
+    "[qr] http://weixin.qq.com/q/02h4LQAc7KeQh1YhNOxGcC  屏幕定位 score=0.991",
+    "[scan] 已点识码图标 score=0.902；百职帮：扫码后请在弹出的微信窗口里【本人】点击确认登录，脚本不会代点。",
+    "★ 请现在到弹出的微信窗口里【本人】点击确认登录。脚本不代点。",
+    "[SUCCESS] 已登录 baicizhan → https://np.baicizhan.com/mine/account"
+  ],
+  "final_url": "https://np.baicizhan.com/mine/account"
+}

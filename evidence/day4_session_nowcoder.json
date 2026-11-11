@@ -1,0 +1,12 @@
+{
+  "tag": "nowcoder",
+  "ts": "20261110_183336",
+  "url": "https://www.nowcoder.com/login",
+  "state": "logged_in",
+  "qr_png": "E:\\WorkBuddy\\开发\\wechat-quicklogin\\evidence\\day4_liveqr_nowcoder_20261110_183336.png",
+  "payload": "http://weixin.qq.com/q/02g8fhZ-5EaWe1-1PO1G1t",
+  "events": [
+    "[fallback-decode] http://weixin.qq.com/q/02g8fhZ-5EaWe1-1PO1G1t"
+  ],
+  "final_url": "https://www.nowcoder.com/"
+}

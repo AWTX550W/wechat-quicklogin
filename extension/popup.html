@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;width:320px;background:#12161f;color:#e8edf5;font:13px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;padding:16px}
+  h1{font-size:15px;margin:0 0 2px}
+  .sub{color:#8d9aad;font-size:11.5px;margin-bottom:14px}
+  .box{background:#1b2230;border:1px solid #33405a;border-radius:8px;padding:11px 12px;margin-bottom:11px}
+  .row{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:3px 0}
+  .row span:first-child{color:#8d9aad;flex:none}
+  .row span:last-child{text-align:right;word-break:break-all}
+  .ok{color:#3ddc84}.warn{color:#f0b429}.bad{color:#f0616d}
+  button{width:100%;cursor:pointer;background:#2b3648;color:#e8edf5;border:1px solid #46556b;border-radius:6px;padding:8px;font-size:12.5px;margin-bottom:7px}
+  button:hover{background:#36455e}
+  button.pri{background:#1a7f4b;border-color:#249c5e}
+  .tip{color:#8d9aad;font-size:11.5px;margin-top:10px}
+</style>
+</head>
+<body>
+  <h1>微信电脑确认</h1>
+  <div class="sub">登录时在电脑上点确认，不用掏手机扫码</div>
+
+  <div class="box" id="state">
+    <div class="row"><span>当前页面</span><span id="url">读取中…</span></div>
+    <div class="row"><span>微信登录框</span><span id="found">—</span></div>
+    <div class="row"><span>已补权限</span><span id="patched">—</span></div>
+    <div class="row"><span>本地网络权限</span><span id="lna">—</span></div>
+  </div>
+
+  <button class="pri" id="diag">打开通道诊断</button>
+  <button id="perm">怎么放行浏览器权限</button>
+  <button id="reload">刷新当前登录页</button>
+
+  <div class="tip" id="tip">
+    若登录页仍只有二维码：点「放行浏览器权限」按提示把本站的「本地网络访问」改为允许，再刷新页面。
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "ts": "20261110_173856",
+  "qr_png": "E:\\WorkBuddy\\开发\\wechat-quicklogin\\evidence\\day4_liveqr_20261110_173856.png",
+  "uuid": "091FsITS3Rqmml24",
+  "events": [
+    "[FAIL] https://res.wx.qq.com/t/wx_fed/finder/static-assets/finder-common-assets/res/finder-helper/2560x864_helper.mp4 net::ERR_ABORTED",
+    "[RESP] 200 https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&scope=snsapi_login&redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2Fplatform%2Foauth-ca",
+    "[RESP] 200 https://open.weixin.qq.com/connect/qrcode/091FsITS3Rqmml24",
+    "[FAIL] https://res.wx.qq.com/t/wx_fed/finder/static-assets/finder-common-assets/res/finder-helper/2560x864_MCN.mp4 net::ERR_ABORTED",
+    "[FAIL] https://support.weixin.qq.com/cgi-bin/mmsupportmeshnodelogicsvr-bin/cube?biz=3512&label=connect.qrconnect&action=connect_qrconnect_iframe&ms net::ERR_BLOCKED_BY_ORB",
+    "[FAIL] https://res.wx.qq.com/t/wx_fed/finder/static-assets/finder-common-assets/res/finder-helper/3500x864_promote1.mp4 net::ERR_ABORTED",
+    "[FAIL] https://localhost.weixin.qq.com:14015/api/check-login net::ERR_CONNECTION_REFUSED",
+    "[FAIL] https://localhost.weixin.qq.com:13013/api/check-login net::ERR_CONNECTION_REFUSED",
+    "[FAIL] https://localhost.weixin.qq.com:14014/api/check-login net::ERR_CONNECTION_REFUSED",
+    "[FAIL] https://localhost.weixin.qq.com:13014/api/check-login net::ERR_CONNECTION_REFUSED",
+    "[FAIL] https://localhost.weixin.qq.com:13015/api/check-login net::ERR_CONNECTION_REFUSED",
+    "[FAIL] https://support.weixin.qq.com/cgi-bin/mmsupportmeshnodelogicsvr-bin/cube?biz=3512&label=connect.qrconnect&action=connect_qrconnect_checkLogi net::ERR_BLOCKED_BY_ORB"
+  ],
+  "final_url": "https://channels.weixin.qq.com/login.html",
+  "frames": [
+    "https://channels.weixin.qq.com/login.html",
+    "https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&scope=snsapi_login&redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "微信电脑确认 · QuickLogin 修复",
+  "version": "1.0.0",
+  "description": "把 Chrome/Edge 142+ 之后失效的微信「网站应用快速登录」通道补回来：登录时在电脑上点确认，不用掏手机扫码。纯本地 DOM 补丁，不碰账号与凭证。",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "*://*.weixin.qq.com/*",
+    "*://*.qq.com/*",
+    "*://localhost.weixin.qq.com/*",
+    "https://127.0.0.1/*",
+    "http://127.0.0.1/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "nocache_wxlogin",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false,
+      "match_about_blank": false
+    }
+  ],
+  "action": {
+    "default_title": "微信电脑确认 · 状态与诊断",
+    "default_popup": "popup.html"
+  }
+}

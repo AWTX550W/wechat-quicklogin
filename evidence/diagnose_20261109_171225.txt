@@ -1,0 +1,49 @@
+【已废弃 · 修复前错误输出，保留作为回归证据，请勿引用其结论】
+原因：初版诊断器依赖 `powershell` 命令，在 Git Bash 环境下不在 PATH，
+      探测器本身失败却被写成了「微信未运行 / 浏览器不超标」的事实结论。
+修复：改用纯 Win32 API (ctypes) 探测，并对探测器不可用的情况标注「未知」而非下结论。
+对照：见 diagnose_20261109_171452.txt（修复后，与独立 PowerShell 实测一致）。
+原始内容如下，未作篡改：
+--------------------------------------------------------------------
+====================================================================
+微信电脑确认 · 本机通道诊断  2026-11-09T17:12:25
+====================================================================
+
+[1] PC 微信客户端
+    路径      : 未找到
+    版本      : 未知  (要求 Windows >= 3.9.11)
+    监听端口  : 无
+
+[2] 浏览器
+    Microsoft Edge   __ERROR__ FileNotFoundError: [WinError 2] 系统找不到指定的文件。 LNA 风险: 否
+
+[3] DNS / 本地服务直连
+    localhost.weixin.qq.com -> 127.0.0.1
+    :13013  TCP=FAIL TLS=-
+    :13015  TCP=FAIL TLS=-
+    :14013  TCP=OK   TLS=SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+    :14016  TCP=OK   TLS=SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+    :14019  TCP=OK   TLS=SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+    :14022  TCP=OK   TLS=SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+    :14023  TCP=OK   TLS=SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)
+    :14026  TCP=FAIL TLS=-
+
+[4] 结论
+    [BAD ] 未检测到运行中的 PC 微信客户端；快速登录必须有已登录且未锁定的客户端
+    [BAD ] 未发现微信客户端的本地监听端口
+    [OK  ] DNS: localhost.weixin.qq.com -> 127.0.0.1
+    [OK  ] 未发现 ≥142 的 Chromium 浏览器
+    [WARN] 5 个本地端口 TCP 可连但 TLS 握手被对端断开。微信本地服务使用内部 TLS/客户端指纹校验，非浏览器直连被拒属预期，不能据此判定快速登录通道不可用；判据是「登录页是否出现快捷登录头像」
+
+[5] 修复清单（按优先级）
+    1. 在需要登录的网站上：地址栏左侧锁图标 → 网站设置 → 「本地网络访问」改为「允许」。之前点过「阻止」必须改回来；Chrome 142+ 首次弹窗要点「允许」。
+    2. 安装同目录 extension/ 扩展（Edge/Chrome 开发者模式加载已解压的扩展），它会自动给微信登录 iframe 补 allow="local-network-access ..."，并给 wxLogin.js 加 no-cache。
+    3. 刷新登录页，点状态条的「重新检测」。出现头像 +「快捷登录」即修复成功，电脑上点确认即可。
+    4. 确认 PC 微信处于已登录且未锁定状态；网站自己传 fast_login=0 的会强制扫码，扩展不改业务参数。
+    5. 老站点没接快速登录的，用 desktop-scan/ 的热键工具截屏识别二维码，送进 PC 微信「识别图中二维码」。
+
+[6] 边界（未做 / 不声称）
+    - 本工具不绕过微信的安全模型，不模拟手机、不伪造授权、不碰账号与 Cookie。
+    - 快速登录是微信官方能力；能不能用取决于网站是否接入、客户端状态、浏览器权限。
+    - TLS 直连失败是微信内部协议所致，本诊断不把它当作「通道不可用」的证据。
+    - 未做：真实的第三方网站登录端到端实测（需要用户实际打开一个登录页）。

@@ -1,0 +1,20 @@
+浏览器 : C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+扩展   : E:\WorkBuddy\开发\wechat-quicklogin\extension
+页面   : http://127.0.0.1:8765/evidence/mock_login.html
+
+--- dump-dom 中的 iframe（修复前 mock 页面均无 allow）---
+   <iframe id="wxlogin" width="300" height="300" src="https://open.weixin.qq.com/connect/qrconnect?appid=wxMOCKTEST&amp;redirect_uri=https%3A%2F%2Fexample.com%2Fcb&amp;response_type=code&amp;scope=snsapi_login&amp;state=abc#wechat_redirect" allow="local-network-access; loopback-network; local-network" data-wxql-patched="1">
+   <iframe id="ad" width="100" height="100" src="https://example.com/ad.html">
+   <iframe id="wxlogin-async" src="https://open.weixin.qq.com/connect/qrconnect?appid=wxMOCKASYNC&amp;scope=snsapi_login&amp;state=xyz" allow="local-network-access; loopback-network; local-network" data-wxql-patched="1">
+
+--- 校验 ---
+  [PASS] dump-dom 有内容
+  [PASS] 检测到 2 个微信登录 iframe（同步+异步）
+  [PASS] 2 个微信登录 iframe 全部补上 allow
+  [PASS] allow 含 Chrome145 新权限名 loopback-network
+  [PASS] 普通 iframe 未被误改
+  [PASS] 状态条已注入
+  [PASS] 补属性后自动重载已完成（无残留 reloading 标记）
+  [PASS] 重载后 iframe src 仍是原登录地址
+
+结论: 端到端通过

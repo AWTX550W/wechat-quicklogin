@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>mock 微信登录页（端到端测试用）</title></head>
+<body>
+<h1>mock 微信登录页</h1>
+<!-- 模拟：站点缓存里的旧版 wxLogin.js 生成的 iframe，没有 allow 属性 -->
+<iframe id="wxlogin" width="300" height="300"
+  src="https://open.weixin.qq.com/connect/qrconnect?appid=wxMOCKTEST&redirect_uri=https%3A%2F%2Fexample.com%2Fcb&response_type=code&scope=snsapi_login&state=abc#wechat_redirect"></iframe>
+<!-- 对照组：普通 iframe，扩展不应触碰 -->
+<iframe id="ad" width="100" height="100" src="https://example.com/ad.html"></iframe>
+<script>
+  // 模拟异步挂载：旧版 SDK 也会在 DOMContentLoaded 之后才插入 iframe
+  setTimeout(function () {
+    var f = document.createElement('iframe');
+    f.id = 'wxlogin-async';
+    f.src = 'https://open.weixin.qq.com/connect/qrconnect?appid=wxMOCKASYNC&scope=snsapi_login&state=xyz';
+    document.body.appendChild(f);
+  }, 300);
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "tag": "sk1z",
+  "ts": "20261110_210302",
+  "state": "error",
+  "events": [
+    "[error] TargetClosedError: Page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to \"https://www.sk1z.com/login\", waiting until \"domcontentloaded\"\n"
+  ],
+  "error": "TargetClosedError: Page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to \"https://www.sk1z.com/login\", waiting until \"domcontentloaded\"\n"
+}

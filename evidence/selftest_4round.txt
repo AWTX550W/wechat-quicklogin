@@ -1,0 +1,12 @@
+==================================================================
+桌面扫码兜底 · 自测（负例 -> 正例 -> 难例 -> 真实登录码闭环 四轮）
+==================================================================
+[轮次 1 / 负例] 空白图 -> 识别结果 0 个；预期 0 个 -> PASS
+[轮次 2 / 正例] 生成二维码 -> 识别 1 个；内容一致: True -> PASS
+    生成: E:\WorkBuddy\开发\wechat-quicklogin\desktop-scan\out\selftest_qr.png
+    解码: https://open.weixin.qq.com/connect/qrconnect?appid=wxSELFTEST&scope=snsapi_login
+    自动裁切区域: 209x209 px
+[轮次 3 / 难例] 反色+高斯模糊 -> 修复前单引擎: FAIL / 修复后引擎链: OK -> PASS
+[轮次 4 / 真实登录码闭环] connect/confirm?uuid 分类: OK / 裁切 (90, 91) -> 放大 (450, 455) (x5) / 二次解码: OK -> PASS
+
+结论: 四轮全部通过  (负例=True, 正例=True, 难例=True, 登录码闭环=True)

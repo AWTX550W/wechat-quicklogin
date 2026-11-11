@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Cache-Control", "operation": "set", "value": "no-cache" },
+        { "header": "Pragma", "operation": "set", "value": "no-cache" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||res.wx.qq.com/",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Cache-Control", "operation": "set", "value": "no-cache" },
+        { "header": "Pragma", "operation": "set", "value": "no-cache" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||open.weixin.qq.com/connect/",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Cache-Control", "operation": "set", "value": "no-cache" },
+        { "header": "Pragma", "operation": "set", "value": "no-cache" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||wwcdn.weixin.qq.com/",
+      "resourceTypes": ["script"]
+    }
+  }
+]

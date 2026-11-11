@@ -1,0 +1,63 @@
+浏览器: Edge(channel=msedge) headless   LNA: off
+目标  : https://channels.weixin.qq.com/login.html
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14013/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14014/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:14015/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13013/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13014/api/check-login
+[CON] log checklogin post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+[REQ ] POST https://localhost.weixin.qq.com:13015/api/check-login
+[FAIL] https://localhost.weixin.qq.com:13014/api/check-login -> net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:14014/api/check-login -> net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:13013/api/check-login -> net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:14015/api/check-login -> net::ERR_CONNECTION_REFUSED
+[FAIL] https://localhost.weixin.qq.com:13015/api/check-login -> net::ERR_CONNECTION_REFUSED
+[RESP] 200 https://localhost.weixin.qq.com:14013/api/check-login
+
+--- frames ---
+  frame url=https://channels.weixin.qq.com/login.html
+  frame url=https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&scope=snsapi_login&redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2Fplatform%
+
+--- iframe 标签（看 allow 属性）---
+  <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wx20d84d087938fd46&amp;scope=snsapi_login&amp;redirect_uri=https%3A%2F%2Fchannels.weixin.qq.com%2Fplatform%2Foauth-callback.html%3Fdark%3D1&amp;state=undefined&amp;login_type=jssdk&amp;self_redirect=true&amp;styletype=&amp;sizetype=&amp;bgcolor=&amp;rst=&amp;ts=1794281451772&amp;style=white&amp;stylelite=1&amp;color_scheme=dark" frame
+
+--- 关键文案探测 ---
+  '微信快捷登录' 命中 3
+  '使用微信扫码' 命中 0
+  '立即登录' 命中 0
+  '同意' 命中 0
+  '扫码登录' 命中 0
+  '二维码' 命中 0
+
+--- 登录 iframe 内部结构（截断）---
+  len=43208
+  <!DOCTYPE html><html><head><script async="" src="https://lp.open.weixin.qq.com/connect/l/qrconnect?uuid=031cIlUy4RSrll27"></script> 		<title>微信登录</title> 		<meta charset="utf-8">		     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover"> 		<link href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico" rel="Shortcut Icon">      <!-- iframe & 客户端嵌入 -->     <!--style-->      <script>       window.pageStartTime = new Date().getTime();     </script>      <!-- 独立页面 -->     <!-- 由于文件打包问题，暂时无法按需引入css，所以需要指定独立的命名空间       页面-独立页面：.web_qrcode_type_page_self       页面-webview内嵌：.web_qrcode_type_page_embedded       iframe：.web_qrcode_type_iframe     -->     <link rel="stylesheet" href="https://res.wx.qq.com/t/wx_fed/weui-source/res/2.6.21/weui.min.css">     <!--style-->     <!--[if IE]>       <style>         .weui-vertical-helper{           height:100%;         }         .web_qrcode_wrp{           margin-top:-100px;         }         .web_qrcode_type_page_self .web_qrcode_app{           vertical-align:middle;           margin-top:-.2em;         }       </style>     <![endif]-->     <!--[if lt IE 9]>       <style>         .web_qrcode_type_page_self .web_qrcode_tips_logo{           background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADiNXWtAAAEgklEQVRIDX1WW2hcVRRd596bmWSSTDKJIRk12ERF/ahIjBLTD0XwQRHRqiCFoogVHxT0oyj6oeBHWyNYUSooJR9+iFJRtAqFCCokCq0Wkqo1kpKQ2iQS0zwmmUdm7nXtfe+5TaatOzl377PP3ms/ziMxiCgx+9LWynplbwDTDwRZqusAYxAEytSMIgyHcCErO8anskD9jDFmxPXMQKnjnTFrAvfsi7uCiv8RHZLqLI4kw5+AP8IvRQGDE5A52IixVdG4zu7K1Qc/NolpZu5XjnMpWZ1gHOwi/xCI2P9XYNFz3Ns8gu8lUFJcbJ6Wa0B+LL7oVRfia+Za5YYKrC1NkoL
+
+--- 尝试点击流程 ---
+  '立即登录' 无可点击元素
+  '同意' 无可点击元素
+  '微信快捷登录' #0 box=None visible=False html=<div class="web_qrcode_tips js_web_qrcode_tips_fast" style=""><i class="web_qrcode_tips_logo"></i>使用微信快捷登录</div>
+  '微信快捷登录' #1 box=None visible=False html=<button class="weui-btn weui-btn_primary js_quick_login_btn qlogin_btn" type="button">微信快捷登录</button>
+  '微信快捷登录' #2 box={'x': 1132, 'y': 499.390625, 'width': 132, 'height': 29.75} visible=True html=<button class="weui-btn weui-btn_primary js_quick_login_btn qlogin_btn" type="button">微信快捷登录</button>
+[CON] log authorize post redirect_uri https://channels.weixin.qq.com/platform/oauth-callback.html?dark=1
+  -> mouse click @ 1198,514
+[REQ ] POST https://localhost.weixin.qq.com:14013/api/authorize
+
+--- 点击后状态 ---
+  '微信快捷登录' 命中 3
+  '允许' 命中 4
+  '授权' 命中 0
+  '扫码' 命中 0
+  '确认' 命中 0
+
+--- 捕获到的本地接口响应体 ---
+  https://localhost.weixin.qq.com:14013/api/check-login
+    -> {"apiname":"qrconnectchecklogin","errcode":0,"jsdata":{"nickname":"é˜¿ç»´ 0.0","headimgurl":"https://thirdwx.qlogo.cn/mmopen/vi_32/EmHplQMibFZEoY5839Sicc71fQC5W5gqu9ib3ibfDBu9W7mSlafH8709Vv7Q5xicxqPHPvYh626cPwlffb8CKCZIB0C3GYkc84EKfbt7F64arQDo/132","authorize_uuid":"033GBSsP3suAFa1n"}}
+
+--- 最终 URL ---
+  https://channels.weixin.qq.com/login.html

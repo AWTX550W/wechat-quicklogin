@@ -1,0 +1,12 @@
+{
+  "tag": "baicizhan_probe",
+  "ts": "20261110_181050",
+  "url": "https://np.baicizhan.com/",
+  "state": "timeout",
+  "qr_png": "E:\\WorkBuddy\\开发\\wechat-quicklogin\\evidence\\day4_liveqr_baicizhan_probe_20261110_181050.png",
+  "payload": "http://weixin.qq.com/q/02VoOqBt7KeQh1Y6MONGcr",
+  "events": [
+    "[preclick] 登录/注册",
+    "[fallback-decode] http://weixin.qq.com/q/02VoOqBt7KeQh1Y6MONGcr"
+  ]
+}

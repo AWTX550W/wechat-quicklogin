@@ -1,0 +1,23 @@
+# 浏览器临时 profile：含 Cookie/缓存/登录态，绝不入库
+edge-profile/
+__pycache__/
+*.pyc
+desktop-scan/out/
+
+# 敏感证据截图不公开：微信窗口/聊天画面/全屏/剪贴板/带账号头像的页面图
+evidence/clipboard_*.png
+evidence/day2_*.png
+evidence/day3_wechat_authorize_card*.png
+evidence/dbg_screen.png
+evidence/day4_screen_*.png
+evidence/day4_after_qricon.png
+evidence/day4_overlay_fresh.png
+evidence/live_screen_*.png
+evidence/probe_*.png
+evidence/qr_browser_docsqq.png
+evidence/wechat_*.png
+evidence/win_*.png
+evidence/wxlive_*.png
+evidence/wxprobe_*.png
+evidence/wxstep_*.png
+evidence/complete_*_timeout.png
