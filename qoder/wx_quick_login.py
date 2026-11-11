@@ -236,7 +236,7 @@ def run_screen():
         print(f"屏幕识别到 {len(payloads)} 个码，扫第一个：{payloads[0]}", flush=True)
         if payloads[0].startswith(("https://open.weixin.qq.com/connect/", "http://open.weixin.qq.com/connect/")):
             print("这是微信「网站应用」码：微信规定只能手机摄像头识别，电脑识码必跳限制页，不扫。", flush=True)
-            print("电脑免手机的正路：微信自带快捷登录——直接在网站登录弹窗里点「微信快捷登录」，微信弹授权卡后本人点『允许』即可（代理/浏览器拦截导致按钮不出现时，见项目 README 补记四的排查指引）。", flush=True)
+            print("电脑免手机的正路：微信自带快捷登录——直接在网站登录弹窗里点「微信快捷登录」，微信弹授权卡后本人点『允许』即可（代理/浏览器拦截导致按钮不出现时，见项目 README「排查：快捷登录按钮不出现」一节）。", flush=True)
             return 1
         hit = match_best(bgr(g), bgr(crop), (1.0,))
         if not hit or hit[0] < 0.8:
