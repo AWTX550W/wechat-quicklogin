@@ -29,6 +29,12 @@ import os
 import sys
 import time
 
+# OpenBLAS 修复（2026-11-13）：低可用内存时 OpenBLAS 默认按 CPU 核数预分配线程池，
+# 会刷 "Memory allocation still failed after 10 retries, giving up." 并让 bat 直接失败。
+# 必须在 import cv2/numpy 之前限制线程数；bat 里同样有 set 双保险。
+for _v in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"):
+    os.environ.setdefault(_v, "1")
+
 import cv2
 import numpy as np
 from PIL import Image, ImageGrab
